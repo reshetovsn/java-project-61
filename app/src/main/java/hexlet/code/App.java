@@ -7,6 +7,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.print("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
+                + "2 - Even\n"
                 + "0 - Exit\n"
                 + "Your choice: ");
         int choiceNumber = sc.nextInt();
@@ -18,8 +19,7 @@ public class App {
             Cli.greeting();
         } else if (choiceNumber == 2) {
             System.out.println("Welcome to the Brain Games!");
-            Cli.greeting();
-            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+            GameEvenNumber.checkEven();
         }
     }
 }
