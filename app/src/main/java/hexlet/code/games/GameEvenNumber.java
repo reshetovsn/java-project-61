@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 
 public class GameEvenNumber {
     public static String isEven(int number) {
+
         return number % 2 == 0 ? "yes" : "no";
     }
     public static void checkEven() {
