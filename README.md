@@ -7,3 +7,5 @@
 https://cloud.mail.ru/public/sKaZ/P5komPK3C
 ### Link to the 2nd game Calculator
 https://cloud.mail.ru/public/hDGg/WhgU7cPtX
+### Link to the 3d game greatest common divisor (GCD)
+https://cloud.mail.ru/public/iWUG/BBBRhySr8
