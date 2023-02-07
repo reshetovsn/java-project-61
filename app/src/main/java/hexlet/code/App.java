@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.GameCalculator;
-import hexlet.code.games.GameEvenNumber;
+import hexlet.code.games.GameEvenNumbers;
 import hexlet.code.games.GameGCD;
 import hexlet.code.games.GameProgression;
 
@@ -25,7 +25,7 @@ public class App {
         } else if (choiceNumber == 1) {
             Cli.greeting();
         } else if (choiceNumber == 2) {
-            GameEvenNumber.checkEven();
+            GameEvenNumbers.checkEven();
         } else if (choiceNumber == 3) {
             GameCalculator.checkResults();
         } else if (choiceNumber == 4) {
