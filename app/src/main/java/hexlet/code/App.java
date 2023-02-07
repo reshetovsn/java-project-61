@@ -23,19 +23,14 @@ public class App {
         if (choiceNumber == 0) {
             sc.close();
         } else if (choiceNumber == 1) {
-            System.out.println("Welcome to the Brain Games!");
             Cli.greeting();
         } else if (choiceNumber == 2) {
-            System.out.println("Welcome to the Brain Games!");
             GameEvenNumber.checkEven();
         } else if (choiceNumber == 3) {
-            System.out.println("Welcome to the Brain Games!");
             GameCalculator.checkResults();
         } else if (choiceNumber == 4) {
-            System.out.println("Welcome to the Brain Games!");
             GameGCD.getNod();
         } else if (choiceNumber == 5) {
-            System.out.println("Welcome to the Brain Games!");
             GameProgression.getNumFromProgression();
         }
     }
