@@ -12,3 +12,5 @@ https://cloud.mail.ru/public/hDGg/WhgU7cPtX
 https://cloud.mail.ru/public/iWUG/BBBRhySr8
 ### Link to the 4th game Progression
 https://cloud.mail.ru/public/vEsy/Jp9v9ujqF
+### Link to the 5th game PrimeNumber
+https://cloud.mail.ru/public/pg9Q/ejajZvfhN
