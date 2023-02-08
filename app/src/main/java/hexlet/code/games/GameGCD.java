@@ -9,7 +9,7 @@ public class GameGCD {
     private static int num2;
 
     // convert integer result into string
-    private static String intoStr (int result) {
+    private static String intoStr(int result) {
         return String.valueOf(result);
     }
     public static void getNod() {

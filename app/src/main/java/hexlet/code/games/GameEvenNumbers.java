@@ -10,7 +10,7 @@ public class GameEvenNumbers {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            var randNum = (int)(Math.random() * 100);
+            var randNum = (int) (Math.random() * 100);
             questions[i] = "Question: " + randNum;
             results[i] = isEven(randNum);
         }

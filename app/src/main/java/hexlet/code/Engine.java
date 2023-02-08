@@ -8,7 +8,7 @@ public class Engine {
     private static int rounds = 3; // fix number in all games
 
     // for getting numberOfRounds in games
-    public static int getRounds(){
+    public static int getRounds() {
         return rounds;
     }
     // Greeting. Used in all games at the very beginning //

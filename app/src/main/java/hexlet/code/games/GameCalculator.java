@@ -8,14 +8,14 @@ public class GameCalculator {
     private static int num1;
     private static int num2;
     // This method gets a random operator from the array
-    private static char getOperator () {
+    private static char getOperator() {
         Random randomChar = new Random();
         char[] expression = {'+', '-', '*'};
         int i = randomChar.nextInt(0, 3);
         return expression[i];
     }
     // convert integer result into string
-    private static String intoStr (int result) {
+    private static String intoStr(int result) {
         return String.valueOf(result);
     }
     public static void checkResults() {
@@ -27,7 +27,7 @@ public class GameCalculator {
             num2 = rand.nextInt(100);
             var operator = getOperator();
             var result = 0;
-            if(operator == '+') {
+            if (operator == '+') {
                 result = num1 + num2;
             } else if (operator == '-') {
                 result = num1 - num2;
