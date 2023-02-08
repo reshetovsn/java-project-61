@@ -5,11 +5,14 @@ import java.util.Scanner;
 public class Engine {
     private static Scanner sc;
     private static String userName;
-    private static int rounds = 3; // fix number in all games
-
+    private static final int rounds = 3; // fix number in all games
+    private static final int upperBoundForRand = 100; // Upper Bound for generated random number
     // for getting numberOfRounds in games
     public static int getRounds() {
         return rounds;
+    }
+    public static int getUpperBound() {
+        return upperBoundForRand;
     }
     // Greeting. Used in all games at the very beginning //
     public static void greeting() {

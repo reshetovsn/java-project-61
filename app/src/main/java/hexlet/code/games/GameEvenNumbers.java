@@ -2,6 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.util.Random;
+
 public class GameEvenNumbers {
     public static String isEven(int number) {
         return number % 2 == 0 ? "yes" : "no";
@@ -10,7 +12,8 @@ public class GameEvenNumbers {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            var randNum = (int) (Math.random() * 100);
+            Random rand = new Random();
+            var randNum = rand.nextInt(Engine.getUpperBound());
             questions[i] = "Question: " + randNum;
             results[i] = isEven(randNum);
         }

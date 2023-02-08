@@ -23,7 +23,7 @@ public class GamePrimeNumber {
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             Random rand = new Random();
-            randomNumber = rand.nextInt(100);
+            randomNumber = rand.nextInt(Engine.getUpperBound());
             questions[i] = "Question: " + randomNumber;
             results[i] = isPrime(randomNumber) ? "yes" : "no";
         }

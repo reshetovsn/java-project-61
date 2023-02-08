@@ -7,11 +7,12 @@ import java.util.Random;
 public class GameCalculator {
     private static int num1;
     private static int num2;
+
     // This method gets a random operator from the array
     private static char getOperator() {
         Random randomChar = new Random();
         char[] expression = {'+', '-', '*'};
-        int i = randomChar.nextInt(0, 3);
+        int i = randomChar.nextInt(0, expression.length);
         return expression[i];
     }
     // convert integer result into string
@@ -23,8 +24,8 @@ public class GameCalculator {
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             Random rand = new Random();
-            num1 = rand.nextInt(100);
-            num2 = rand.nextInt(100);
+            num1 = rand.nextInt(Engine.getUpperBound());
+            num2 = rand.nextInt(Engine.getUpperBound());
             var operator = getOperator();
             var result = 0;
             if (operator == '+') {

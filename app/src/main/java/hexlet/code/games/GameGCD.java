@@ -17,8 +17,8 @@ public class GameGCD {
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             Random rand = new Random();
-            num1 = rand.nextInt(100);
-            num2 = rand.nextInt(100);
+            num1 = rand.nextInt(Engine.getUpperBound());
+            num2 = rand.nextInt(Engine.getUpperBound());
             questions[i] = "Question: " + num1 + " " + num2;
             // Make num1 always bigger then num2 //
             if (num2 > num1) {

@@ -8,6 +8,8 @@ import java.util.Random;
 public class GameProgression {
     private static int init;
     private static int step;
+    private static int valueOfStep = 20;
+    private static int progressionSize = 10;
 
     // convert integer result into string
     private static String intoStr(int result) {
@@ -16,11 +18,11 @@ public class GameProgression {
     // Create random array with arithmetic progression //
     private static int[] getArray() {
         Random rand = new Random();
-        init = rand.nextInt(100);
-        step = rand.nextInt(1, 20);
-        int[] progression = new int[10];
+        init = rand.nextInt(Engine.getUpperBound());
+        step = rand.nextInt(1, valueOfStep);
+        int[] progression = new int[progressionSize];
         var r = init;
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < progressionSize; i++) {
             progression[i] = r;
              r = r + step;
         }
@@ -32,7 +34,7 @@ public class GameProgression {
         for (var i = 0; i < Engine.getRounds(); i++) {
             var array = getArray();
             Random randomElement = new Random();
-            int e = randomElement.nextInt(0, 10);
+            int e = randomElement.nextInt(0, progressionSize);
             results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
             array[e] = -1; // change to unreal element in array
             // convert int array into string PS couldn't find a better method
