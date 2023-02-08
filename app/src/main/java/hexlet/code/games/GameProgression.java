@@ -8,6 +8,8 @@ import java.util.Random;
 public class GameProgression {
     private static int init;
     private static int step;
+
+    // convert integer result into string
     private static String intoStr(int result) {
         return String.valueOf(result);
     }
@@ -31,9 +33,9 @@ public class GameProgression {
             var array = getArray();
             Random randomElement = new Random();
             int e = randomElement.nextInt(0, 10);
-            results[i] = intoStr(array[e]);
+            results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
             array[e] = -1; // change to unreal element in array
-            String stringArray = Arrays.toString(array);
+            String stringArray = Arrays.toString(array); // convert int array into string PS couldn't find a better method
             var words = stringArray.split(", ");
             for (var ii = 0; ii < words.length; ii++) { // swap "-1" to ".." (according to the task)
                 words[ii] = words[ii].equals("-1") ? ".." : words[ii];

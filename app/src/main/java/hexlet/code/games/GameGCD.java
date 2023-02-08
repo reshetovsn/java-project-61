@@ -7,6 +7,8 @@ import java.util.Random;
 public class GameGCD {
     private static int num1;
     private static int num2;
+
+    // convert integer result into string
     private static String intoStr (int result) {
         return String.valueOf(result);
     }

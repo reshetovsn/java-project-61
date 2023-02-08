@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Engine {
     private static Scanner sc;
     private static String userName;
-    private static int rounds = 3;
+    private static int rounds = 3; // fix number in all games
 
-    // to take numberOfRounds in games
+    // for getting numberOfRounds in games
     public static int getRounds(){
         return rounds;
     }
-    // Greeting. Used in all games at the start //
+    // Greeting. Used in all games at the very beginning //
     public static void greeting() {
         System.out.println("Welcome to the Brain Games!");
         sc = new Scanner(System.in);

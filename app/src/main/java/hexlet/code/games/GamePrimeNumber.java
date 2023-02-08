@@ -7,10 +7,10 @@ import java.util.Random;
 public class GamePrimeNumber {
     private static int randomNumber;
     private static boolean isPrime(int number) {
-        if (number <= 1) {
+        if (number <= 1) { // 1 - is not a prime number
             return false;
         }
-        var sqr = Math.sqrt(number);
+        var sqr = Math.sqrt(number); // get square from number for algorithm's optimization
         for (int i = 2; i <= sqr; i++) {
             if (number % i == 0) {
                 return false;
