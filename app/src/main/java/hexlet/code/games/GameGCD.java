@@ -7,6 +7,7 @@ import java.util.Random;
 public class GameGCD {
     private static int num1;
     private static int num2;
+    static final int LOWER_BOUND = 1;
 
     // convert integer result into string
     private static String intoStr(int result) {
@@ -17,8 +18,8 @@ public class GameGCD {
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             Random rand = new Random();
-            num1 = rand.nextInt(Engine.getUpperBound());
-            num2 = rand.nextInt(Engine.getUpperBound());
+            num1 = rand.nextInt(LOWER_BOUND, Engine.getUpperBound());
+            num2 = rand.nextInt(LOWER_BOUND, Engine.getUpperBound());
             questions[i] = "Question: " + num1 + " " + num2;
                 // Make num1 always bigger then num2 //
                 if (num2 > num1) {
