@@ -35,12 +35,11 @@ public class GameProgression {
             int e = randomElement.nextInt(0, 10);
             results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
             array[e] = -1; // change to unreal element in array
-            String stringArray = Arrays.toString(array); // convert int array into string PS couldn't find a better method
+            // convert int array into string PS couldn't find a better method
+            String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             var words = stringArray.split(", ");
             for (var ii = 0; ii < words.length; ii++) { // swap "-1" to ".." (according to the task)
                 words[ii] = words[ii].equals("-1") ? ".." : words[ii];
-                words[ii] = words[ii].equals("[-1") ? "[.." : words[ii];
-                words[ii] = words[ii].equals("-1]") ? "..]" : words[ii];
             }
             questions[i] = "Question: " + String.join(" ", words);
         }
