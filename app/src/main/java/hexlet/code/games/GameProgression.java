@@ -8,8 +8,8 @@ import java.util.Random;
 public class GameProgression {
     private static int init;
     private static int step;
-    private static final int valueOfStep = 20;
-    private static final int progressionSize = 10;
+    private static final int VALUE_OF_STEP = 20;
+    private static final int PROGRESSION_SIZE = 10;
 
     // convert integer result into string
     private static String intoStr(int result) {
@@ -19,10 +19,10 @@ public class GameProgression {
     private static int[] getArray() {
         Random rand = new Random();
         init = rand.nextInt(Engine.getUpperBound());
-        step = rand.nextInt(1, valueOfStep);
-        int[] progression = new int[progressionSize];
+        step = rand.nextInt(1, VALUE_OF_STEP);
+        int[] progression = new int[PROGRESSION_SIZE];
         var r = init;
-        for (var i = 0; i < progressionSize; i++) {
+        for (var i = 0; i < PROGRESSION_SIZE; i++) {
             progression[i] = r;
              r = r + step;
         }
@@ -34,7 +34,7 @@ public class GameProgression {
         for (var i = 0; i < Engine.getRounds(); i++) {
             var array = getArray();
             Random randomElement = new Random();
-            int e = randomElement.nextInt(0, progressionSize);
+            int e = randomElement.nextInt(0, PROGRESSION_SIZE);
             results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
             array[e] = -1; // change to unreal element in array
             // convert array into string without "[" and "]"

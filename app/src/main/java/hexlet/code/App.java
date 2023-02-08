@@ -9,34 +9,34 @@ import hexlet.code.games.GamePrimeNumber;
 import java.util.Scanner;
 
 public class App {
-    private static final int exit = 0;
-    private static final int greeting = 1;
-    private static final int gameEvenNumbers = 2;
-    private static final int gameCalculator = 3;
-    private static final int gameGCD = 4;
-    private static final int gameProgression = 5;
-    private static final int gamePrimeNumber = 6;
+    private static final int EXIT = 0;
+    private static final int GREETING = 1;
+    private static final int GAME_EVEN_NUMBERS = 2;
+    private static final int GAME_CALCULATOR = 3;
+    private static final int GAME_GCD = 4;
+    private static final int GAME_PROGRESSION = 5;
+    private static final int GAME_PRIME_NUMBER = 6;
     public static void main(String[] args) {
         System.out.println("Welcome to the Brain Games!");
         Scanner sc = new Scanner(System.in);
-        System.out.print("Please enter the game number and press Enter.\n"
-                + "1 - Greet\n" + "2 - Even\n" + "3 - Calc\n" + "4 - GCD\n"
-                + "5 - Progression\n"  + "6 - Prime\n" + "0 - Exit\n"  + "Your choice: ");
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+        System.out.print("Your choice: ");
         int choiceNumber = sc.nextInt();
         System.out.println(choiceNumber);
-        if (choiceNumber == exit) {
+        if (choiceNumber == EXIT) {
             sc.close();
-        } else if (choiceNumber == greeting) {
+        } else if (choiceNumber == GREETING) {
             Cli.greeting();
-        } else if (choiceNumber == gameEvenNumbers) {
+        } else if (choiceNumber == GAME_EVEN_NUMBERS) {
             GameEvenNumbers.checkEven();
-        } else if (choiceNumber == gameCalculator) {
+        } else if (choiceNumber == GAME_CALCULATOR) {
             GameCalculator.checkResults();
-        } else if (choiceNumber == gameGCD) {
+        } else if (choiceNumber == GAME_GCD) {
             GameGCD.getNod();
-        } else if (choiceNumber == gameProgression) {
+        } else if (choiceNumber == GAME_PROGRESSION) {
             GameProgression.getNumFromProgression();
-        } else if (choiceNumber == gamePrimeNumber) {
+        } else if (choiceNumber == GAME_PRIME_NUMBER) {
             GamePrimeNumber.checkPrime();
         }
     }
