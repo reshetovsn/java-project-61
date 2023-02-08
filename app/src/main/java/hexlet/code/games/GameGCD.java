@@ -22,21 +22,22 @@ public class GameGCD {
             questions[i] = "Question: " + num1 + " " + num2;
             if (num2 == 0) {
                 results[i] = intoStr(num1);
+            } else {
+                // Make num1 always bigger then num2 //
+                if (num2 > num1) {
+                    var temp = num1;
+                    num1 = num2;
+                    num2 = temp;
+                }
+                var r = num1 % num2;
+                // Euclid's algorithm //
+                while (r != 0) {
+                    num1 = num2;
+                    num2 = r;
+                    r = num1 % num2;
+                }
+                results[i] = intoStr(num2);
             }
-            // Make num1 always bigger then num2 //
-            if (num2 > num1) {
-                var temp = num1;
-                num1 = num2;
-                num2 = temp;
-            }
-            var r = num1 % num2;
-            // Euclid's algorithm //
-            while (r != 0) {
-                num1 = num2;
-                num2 = r;
-                r = num1 % num2;
-            }
-            results[i] = intoStr(num2);
         }
         Engine.flow(questions, results, "Find the greatest common divisor of given numbers.");
     }
