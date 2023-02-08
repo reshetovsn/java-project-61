@@ -20,9 +20,6 @@ public class GameGCD {
             num1 = rand.nextInt(Engine.getUpperBound());
             num2 = rand.nextInt(Engine.getUpperBound());
             questions[i] = "Question: " + num1 + " " + num2;
-            if (num2 == 0) {
-                results[i] = intoStr(num1);
-            } else {
                 // Make num1 always bigger then num2 //
                 if (num2 > num1) {
                     var temp = num1;
@@ -37,7 +34,6 @@ public class GameGCD {
                     r = num1 % num2;
                 }
                 results[i] = intoStr(num2);
-            }
         }
         Engine.flow(questions, results, "Find the greatest common divisor of given numbers.");
     }
