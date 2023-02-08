@@ -8,8 +8,8 @@ import java.util.Random;
 public class GameProgression {
     private static int init;
     private static int step;
-    private static int valueOfStep = 20;
-    private static int progressionSize = 10;
+    private static final int valueOfStep = 20;
+    private static final int progressionSize = 10;
 
     // convert integer result into string
     private static String intoStr(int result) {
@@ -37,7 +37,7 @@ public class GameProgression {
             int e = randomElement.nextInt(0, progressionSize);
             results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
             array[e] = -1; // change to unreal element in array
-            // convert int array into string PS couldn't find a better method
+            // convert array into string without "[" and "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             var words = stringArray.split(", ");
             for (var ii = 0; ii < words.length; ii++) { // swap "-1" to ".." (according to the task)

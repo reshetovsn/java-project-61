@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Engine {
     private static Scanner sc;
     private static String userName;
-    private static final int rounds = 3; // fix number in all games
-    private static final int upperBoundForRand = 100; // Upper Bound for generated random number
+    private static final int ROUNDS = 3; // fix number of rounds in all games
+    private static final int UPPER_BOUNDS_FOR_RAND = 100; // Upper Bound for generated random number
     // for getting numberOfRounds in games
     public static int getRounds() {
-        return rounds;
+        return ROUNDS;
     }
     public static int getUpperBound() {
-        return upperBoundForRand;
+        return UPPER_BOUNDS_FOR_RAND;
     }
     // Greeting. Used in all games at the very beginning //
     public static void greeting() {
@@ -45,8 +45,8 @@ public class Engine {
     public static void flow(String[] questions, String[] result, String task) {
         greeting();
         System.out.println(task);
-        var answer = new String[rounds];
-        for (var i = 0; i < rounds; i++) {
+        var answer = new String[getRounds()];
+        for (var i = 0; i < getRounds(); i++) {
             System.out.println(questions[i]);
             System.out.print("Your answer: ");
             answer[i] = sc.next();
