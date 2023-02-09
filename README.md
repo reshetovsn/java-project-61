@@ -1,19 +1,15 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/reshetovsn/java-project-61/workflows/hexlet-check/badge.svg)](https://github.com/reshetovsn/java-project-61/actions)
-<a href="https://codeclimate.com/github/reshetovsn/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/e65c9fd6c574a55be356/maintainability" /></
+<a href="https://codeclimate.com/github/reshetovsn/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/e65c9fd6c574a55be356/maintainability" />
 
 Программа представляет собой сборник небольших логико-математических игр - Brain Games.
-
 В сборнике представлены следующие игры:
-
 1. Ответить на вопрос четное ли число;
 2. Калькулятор;
 3. Найти наибольший общий делитель;
 4. Дополнить арифметическую прогрессию;
 5. Ответить на вопрос простое ли число;
-
-Всего три раунда. Игра генерирует случайные числа, после чего предлагает ответить на соответствующий вопросить с ними различные несложные арифметические действия. В случае трёх правильных ответов игрок объявляется победителем. В случае ошибки придётся начинать сначала.
-
+Всего три раунда. Игра генерирует случайные числа, после чего предлагает ответить на соответствующий вопрос. В случае трёх правильных ответов игрок объявляется победителем. В случае ошибки придётся начинать сначала.
 Для запуска игры откройте терминал, перейдите в папку с игрой и выполните следующую команду:
 `make run-dist`
 
