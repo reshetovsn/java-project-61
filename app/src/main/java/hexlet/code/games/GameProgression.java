@@ -35,9 +35,9 @@ public class GameProgression {
             var array = getArray();
             Random randomElement = new Random();
             int e = randomElement.nextInt(0, PROGRESSION_SIZE);
-            results[i] = intoStr(array[e]); // chose a random element in array to swap it after to ".."
+            results[i] = intoStr(array[e]); // choose a random element in array to swap it after
             array[e] = -1; // change to unreal element in array
-            // convert array into string without "[" and "]"
+            // convert array into string without "[" & "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             var words = stringArray.split(", ");
             for (var ii = 0; ii < words.length; ii++) { // swap "-1" to ".." (according to the task)
