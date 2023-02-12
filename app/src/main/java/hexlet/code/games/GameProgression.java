@@ -40,7 +40,7 @@ public class GameProgression {
             // convert array into string without "[" & "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             var words = stringArray.split(", ");
-            for (var ii = 0; ii < words.length; ii++) { // swap "-1" to ".." (according to the task)
+            for (var ii = 0; ii < words.length; ii++) { // swap "-1" for ".."
                 words[ii] = words[ii].equals("-1") ? ".." : words[ii];
             }
             questions[i] = "Question: " + String.join(" ", words);
