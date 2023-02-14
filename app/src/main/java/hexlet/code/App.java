@@ -1,10 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.GameEvenNumbers;
-import hexlet.code.games.GameCalculator;
-import hexlet.code.games.GameGCD;
-import hexlet.code.games.GameProgression;
-import hexlet.code.games.GamePrimeNumber;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,6 +12,7 @@ public class App {
     private static final int GAME_GCD = 4;
     private static final int GAME_PROGRESSION = 5;
     private static final int GAME_PRIME_NUMBER = 6;
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Brain Games!");
         Scanner sc = new Scanner(System.in);
@@ -24,20 +21,27 @@ public class App {
         System.out.print("Your choice: ");
         int choiceNumber = sc.nextInt();
         System.out.println(choiceNumber);
-        if (choiceNumber == EXIT) {
-            sc.close();
-        } else if (choiceNumber == GREETING) {
-            Cli.greeting();
-        } else if (choiceNumber == GAME_EVEN_NUMBERS) {
-            GameEvenNumbers.checkEven();
-        } else if (choiceNumber == GAME_CALCULATOR) {
-            GameCalculator.checkResults();
-        } else if (choiceNumber == GAME_GCD) {
-            GameGCD.getNod();
-        } else if (choiceNumber == GAME_PROGRESSION) {
-            GameProgression.getNumFromProgression();
-        } else if (choiceNumber == GAME_PRIME_NUMBER) {
-            GamePrimeNumber.checkPrime();
+        switch (choiceNumber) {
+            case GREETING:
+                Cli.greeting();
+                break;
+            case GAME_EVEN_NUMBERS:
+                GameEvenNumbers.checkEven();
+                break;
+            case GAME_CALCULATOR:
+                GameCalculator.checkResults();
+                break;
+            case GAME_GCD:
+                GameGCD.getNod();
+                break;
+            case GAME_PROGRESSION:
+                GameProgression.getNumFromProgression();
+                break;
+            case GAME_PRIME_NUMBER:
+                GamePrimeNumber.checkPrime();
+                break;
+            default:
+                sc.close();
         }
     }
 }
