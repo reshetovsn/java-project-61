@@ -11,6 +11,7 @@ public class Engine {
     public static int getRounds() {
         return ROUNDS;
     }
+
     public static int getUpperBound() {
         return UPPER_BOUNDS_FOR_RAND;
     }
