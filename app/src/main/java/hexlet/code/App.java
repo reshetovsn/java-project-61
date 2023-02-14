@@ -48,7 +48,7 @@ public class App {
                 GamePrimeNumber.checkPrime();
                 break;
             default:
-                System.out.print("Your choice is incorrect. Please choose from 0-6");
+                System.out.println("Your choice is incorrect. Please choose from 0-6");
                 break;
         }
     }
