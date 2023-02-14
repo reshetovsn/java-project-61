@@ -34,12 +34,12 @@ public class Engine {
 
     public static boolean checkAnswers(String answer, String result) {
         if (answer.equals(result)) {
-        System.out.println("Correct!");
-        return true;
+            System.out.println("Correct!");
+            return true;
         } else {
-        System.out.println(answer + " is wrong answer ;(. Correct answer was " + result + ".");
-        tryAgain();
-        return false;
+            System.out.println(answer + " is wrong answer ;(. Correct answer was " + result + ".");
+            tryAgain();
+            return false;
         }
     }
 
