@@ -5,7 +5,6 @@ import hexlet.code.games.*;
 import java.util.Scanner;
 
 public class App {
-    private static final int EXIT = 0;
     private static final int GREETING = 1;
     private static final int GAME_EVEN_NUMBERS = 2;
     private static final int GAME_CALCULATOR = 3;
