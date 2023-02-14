@@ -8,17 +8,17 @@ public class GameCalculator {
     private static int num1;
     private static int num2;
 
-    // This method gets a random operator from the array
     private static char getOperator() {
         Random randomChar = new Random();
         char[] expression = {'+', '-', '*'};
         int i = randomChar.nextInt(0, expression.length);
         return expression[i];
     }
-    // convert integer result into string
+
     private static String intoStr(int result) {
         return String.valueOf(result);
     }
+
     public static void checkResults() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];

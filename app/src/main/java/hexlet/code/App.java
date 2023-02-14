@@ -5,6 +5,7 @@ import hexlet.code.games.GameCalculator;
 import hexlet.code.games.GameGCD;
 import hexlet.code.games.GameProgression;
 import hexlet.code.games.GamePrimeNumber;
+
 import java.util.Scanner;
 
 public class App {
