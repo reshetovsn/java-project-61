@@ -8,6 +8,7 @@ public class GameEvenNumbers {
     public static boolean isEven(int number) {
         return number % 2 == 0 ? true : false;
     }
+
     public static void checkEven() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
