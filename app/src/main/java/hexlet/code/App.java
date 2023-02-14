@@ -9,6 +9,7 @@ import hexlet.code.games.GamePrimeNumber;
 import java.util.Scanner;
 
 public class App {
+    private static final int EXIT = 0;
     private static final int GREETING = 1;
     private static final int GAME_EVEN_NUMBERS = 2;
     private static final int GAME_CALCULATOR = 3;
@@ -25,6 +26,9 @@ public class App {
         int choiceNumber = sc.nextInt();
         System.out.println(choiceNumber);
         switch (choiceNumber) {
+            case EXIT:
+                sc.close();
+                break;
             case GREETING:
                 Cli.greeting();
                 break;
@@ -44,7 +48,8 @@ public class App {
                 GamePrimeNumber.checkPrime();
                 break;
             default:
-                sc.close();
+                System.out.print("Your choice is incorrect. Please choose from 0-6");
+                break;
         }
     }
 }
