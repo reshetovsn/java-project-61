@@ -9,7 +9,6 @@ public class GameGCD {
     private static int num2;
     static final int LOWER_BOUND = 1;
 
-    // convert integer result into string
     private static String intoStr(int result) {
         return String.valueOf(result);
     }
