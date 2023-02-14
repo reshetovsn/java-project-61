@@ -12,6 +12,7 @@ public class GameGCD {
     private static String intoStr(int result) {
         return String.valueOf(result);
     }
+
     public static void getNod() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
