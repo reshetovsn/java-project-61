@@ -11,11 +11,10 @@ public class GameProgression {
     private static final int VALUE_OF_STEP = 20;
     private static final int PROGRESSION_SIZE = 10;
 
-    // convert integer result into string
     private static String intoStr(int result) {
         return String.valueOf(result);
     }
-    // Create random array with arithmetic progression //
+
     private static int[] getArray() {
         Random rand = new Random();
         init = rand.nextInt(Engine.getUpperBound());
