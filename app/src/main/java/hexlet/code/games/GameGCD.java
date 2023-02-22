@@ -26,8 +26,8 @@ public class GameGCD {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            int num1 = Utils.getRandomNumWithBounds();
-            int num2 = Utils.getRandomNumWithBounds();
+            int num1 = Utils.getRandomNumWithBounds(1,100);
+            int num2 = Utils.getRandomNumWithBounds(1,100);
             questions[i] = "Question: " + num1 + " " + num2;
             results[i] = String.valueOf(getResult(num1, num2));
         }

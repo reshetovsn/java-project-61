@@ -6,15 +6,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class GameProgression {
-    private static final int VALUE_OF_STEP = 20;
     private static final int PROGRESSION_SIZE = 10;
 
-    private static int[] getArray() {
-        Random rand = new Random();
-        int init = Utils.getUpperBound();
-        int step = rand.nextInt(1, VALUE_OF_STEP);
+    private static int[] getArray(int initNumber, int step) {
         int[] progression = new int[PROGRESSION_SIZE];
-        var r = init;
+        var r = initNumber;
         for (var i = 0; i < PROGRESSION_SIZE; i++) {
             progression[i] = r;
              r = r + step;
@@ -31,8 +27,10 @@ public class GameProgression {
     public static void getNumFromProgression() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
+        int init = Utils.getUpperBound();
+        int step = Utils.getRandomNumWithBounds(1,20);
         for (var i = 0; i < Engine.getRounds(); i++) {
-            var array = getArray();
+            var array = getArray(init, step);
             int result = getResult(array);
             // convert array into string without "[" & "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
