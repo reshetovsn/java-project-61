@@ -6,8 +6,6 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class GameCalculator {
-    private static int num1;
-    private static int num2;
 
     private static char getOperator() {
         Random randomChar = new Random();
@@ -34,8 +32,8 @@ public class GameCalculator {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            num1 = Utils.getRandomNumber();
-            num2 = Utils.getRandomNumber();
+            int num1 = Utils.getRandomNumber();
+            int num2 = Utils.getRandomNumber();
             questions[i] = "Question: " + num1 + " " + operator + " " + num2;
             results[i] = String.valueOf(getResult(num1, num2));
         }
