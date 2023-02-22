@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GameEvenNumbers {
     public static boolean isEven(int number) {
@@ -11,7 +12,7 @@ public class GameEvenNumbers {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            var randNum = Engine.getRandomNumber();
+            var randNum = Utils.getRandomNumber();
             questions[i] = "Question: " + randNum;
             results[i] = isEven(randNum) ? "yes" : "no";
         }
