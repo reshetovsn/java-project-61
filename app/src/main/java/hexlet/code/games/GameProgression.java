@@ -27,9 +27,9 @@ public class GameProgression {
     public static void getNumFromProgression() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
-        int init = Utils.getUpperBound();
-        int step = Utils.getRandomNumWithBounds(1,20);
         for (var i = 0; i < Engine.getRounds(); i++) {
+            int init = Utils.getUpperBound();
+            int step = Utils.getRandomNumWithBounds(1,20);
             var array = getArray(init, step);
             int result = getResult(array);
             // convert array into string without "[" & "]"
