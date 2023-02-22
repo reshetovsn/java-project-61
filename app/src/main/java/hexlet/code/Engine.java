@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -16,20 +17,15 @@ public class Engine {
         return UPPER_BOUNDS_FOR_RAND;
     }
 
+    public static int getRandomNumber() {
+        Random rand = new Random();
+        return rand.nextInt(getUpperBound());
+    }
     public static void greeting() {
         sc = new Scanner(System.in);
         System.out.println("May I have your name? ");
         userName = sc.next();
         System.out.println("Hello, " + userName + "!");
-    }
-
-    public static void congratulation() {
-        System.out.println("Congratulations, " +  userName + "!");
-    }
-
-    public static void tryAgain() {
-        System.out.println("Let's try again, " + userName + "!");
-        System.exit(0);
     }
 
     public static boolean checkAnswers(String answer, String result) {
@@ -38,7 +34,8 @@ public class Engine {
             return true;
         } else {
             System.out.println(answer + " is wrong answer ;(. Correct answer was " + result + ".");
-            tryAgain();
+            System.out.println("Let's try again, " + userName + "!");
+            System.exit(0);
             return false;
         }
     }
@@ -53,6 +50,6 @@ public class Engine {
             answer[i] = sc.next();
             checkAnswers(answer[i], result[i]);
         }
-        congratulation();
+        System.out.println("Congratulations, " +  userName + "!");
     }
 }
