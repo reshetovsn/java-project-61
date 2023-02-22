@@ -1,11 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class GamePrimeNumber {
-    private static int randomNumber;
+
     private static boolean isPrime(int number) {
         if (number <= 1) {
             return false;
@@ -23,8 +22,7 @@ public class GamePrimeNumber {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            Random rand = new Random();
-            randomNumber = rand.nextInt(Engine.getUpperBound());
+            int randomNumber = Utils.getRandomNumber();
             questions[i] = "Question: " + randomNumber;
             results[i] = isPrime(randomNumber) ? "yes" : "no";
         }
