@@ -27,6 +27,7 @@ public class App {
         System.out.println(choiceNumber);
         switch (choiceNumber) {
             case EXIT:
+                System.out.println("Goodbye!");
                 sc.close();
                 break;
             case GREETING:
