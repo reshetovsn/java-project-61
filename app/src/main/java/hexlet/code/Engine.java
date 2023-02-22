@@ -6,14 +6,9 @@ public class Engine {
     private static Scanner sc;
     private static String userName;
     private static final int ROUNDS = 3;
-    private static final int UPPER_BOUNDS_FOR_RAND = 100;
 
     public static int getRounds() {
         return ROUNDS;
-    }
-
-    public static int getUpperBound() {
-        return UPPER_BOUNDS_FOR_RAND;
     }
 
     public static void greeting() {
