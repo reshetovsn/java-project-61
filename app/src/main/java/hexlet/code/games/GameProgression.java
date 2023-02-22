@@ -34,15 +34,14 @@ public class GameProgression {
         for (var i = 0; i < Engine.getRounds(); i++) {
             var array = getArray();
             int result = getResult(array);
-            results[i] = String.valueOf(result); // choose a random element in array to swap it after
-//            result = -1; // change to unreal element in array
             // convert array into string without "[" & "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             String[] words = stringArray.split(", ");
-            for (var ii = 0; ii < words.length; ii++) { // swap "-1" for ".."
+            for (var ii = 0; ii < words.length; ii++) {
                 words[ii] = words[ii].equals(String.valueOf(result)) ? ".." : words[ii];
             }
             questions[i] = "Question: " + String.join(" ", words);
+            results[i] = String.valueOf(result);
         }
         Engine.flow(questions, results, "What number is missing in the progression?");
     }
