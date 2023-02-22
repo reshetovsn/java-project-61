@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Random;
 
 public class GameCalculator {
@@ -32,8 +34,8 @@ public class GameCalculator {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            num1 = Engine.getRandomNumber();
-            num2 = Engine.getRandomNumber();
+            num1 = Utils.getRandomNumber();
+            num2 = Utils.getRandomNumber();
             questions[i] = "Question: " + num1 + " " + operator + " " + num2;
             results[i] = String.valueOf(getResult());
         }
