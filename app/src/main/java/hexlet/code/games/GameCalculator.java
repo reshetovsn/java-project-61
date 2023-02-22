@@ -18,14 +18,14 @@ public class GameCalculator {
 
     private static char operator = getOperator();
 
-    private static int getResult() {
+    private static int getResult(int number1, int number2) {
         var result = 0;
         if (operator == '+') {
-            result = num1 + num2;
+            result = number1 + number2;
         } else if (operator == '-') {
-            result = num1 - num2;
+            result = number1 - number2;
         } else if (operator == '*') {
-            result = num1 * num2;
+            result = number1 * number2;
         }
         return result;
     }
@@ -37,7 +37,7 @@ public class GameCalculator {
             num1 = Utils.getRandomNumber();
             num2 = Utils.getRandomNumber();
             questions[i] = "Question: " + num1 + " " + operator + " " + num2;
-            results[i] = String.valueOf(getResult());
+            results[i] = String.valueOf(getResult(num1, num2));
         }
         Engine.flow(questions, results, "What is the result of the expression?");
     }
