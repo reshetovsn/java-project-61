@@ -5,17 +5,17 @@ import java.util.Random;
 public class Utils {
     private static final int UPPER_BOUNDS_FOR_RAND = 100;
     private static final int LOWER_BOUND = 1;
-    private static final Random rand = new Random();
+    private static final Random RAND = new Random();
 
     public static int getUpperBound() {
         return UPPER_BOUNDS_FOR_RAND;
     }
 
     public static int getRandomNumber() {
-        return rand.nextInt(getUpperBound());
+        return RAND.nextInt(getUpperBound());
     }
 
     public static int getRandomNumWithBounds() {
-        return rand.nextInt(LOWER_BOUND, getUpperBound());
+        return RAND.nextInt(LOWER_BOUND, getUpperBound());
     }
 }
