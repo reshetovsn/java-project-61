@@ -2,9 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
 import java.util.Arrays;
-
 import java.util.Random;
 
 public class GameProgression {
