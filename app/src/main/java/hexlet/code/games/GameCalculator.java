@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public class GameCalculator {
@@ -15,28 +14,28 @@ public class GameCalculator {
         return expression[i];
     }
 
-    private static String intoStr(int result) {
-        return String.valueOf(result);
+    private static char operator = getOperator();
+
+    private static int getResult() {
+        var result = 0;
+        if (operator == '+') {
+            result = num1 + num2;
+        } else if (operator == '-') {
+            result = num1 - num2;
+        } else if (operator == '*') {
+            result = num1 * num2;
+        }
+        return result;
     }
 
     public static void checkResults() {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            Random rand = new Random();
-            num1 = rand.nextInt(Engine.getUpperBound());
-            num2 = rand.nextInt(Engine.getUpperBound());
-            var operator = getOperator();
-            var result = 0;
-            if (operator == '+') {
-                result = num1 + num2;
-            } else if (operator == '-') {
-                result = num1 - num2;
-            } else if (operator == '*') {
-                result = num1 * num2;
-            }
+            num1 = Engine.getRandomNumber();
+            num2 = Engine.getRandomNumber();
             questions[i] = "Question: " + num1 + " " + operator + " " + num2;
-            results[i] = intoStr(result);
+            results[i] = String.valueOf(getResult());
         }
         Engine.flow(questions, results, "What is the result of the expression?");
     }
