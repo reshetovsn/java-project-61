@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -17,10 +16,6 @@ public class Engine {
         return UPPER_BOUNDS_FOR_RAND;
     }
 
-    public static int getRandomNumber() {
-        Random rand = new Random();
-        return rand.nextInt(getUpperBound());
-    }
     public static void greeting() {
         sc = new Scanner(System.in);
         System.out.println("May I have your name? ");
