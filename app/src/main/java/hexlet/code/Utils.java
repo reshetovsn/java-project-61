@@ -5,7 +5,7 @@ import java.util.Random;
 public class Utils {
     private static final int UPPER_BOUNDS_FOR_RAND = 100;
     private static final int LOWER_BOUND = 1;
-    static Random rand = new Random();
+    private static final Random rand = new Random();
 
     public static int getUpperBound() {
         return UPPER_BOUNDS_FOR_RAND;
