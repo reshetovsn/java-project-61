@@ -2,13 +2,16 @@ package hexlet.code;
 
 import java.util.Random;
 
-import static hexlet.code.Engine.getUpperBound;
-
 public class Utils {
 
+    static final int LOWER_BOUND = 1;
+    static Random rand = new Random();
+
     public static int getRandomNumber() {
-        Random rand = new Random();
-        return rand.nextInt(getUpperBound());
+        return rand.nextInt(Engine.getUpperBound());
     }
 
+    public static int getRandomNumWithBounds() {
+        return rand.nextInt(LOWER_BOUND, Engine.getUpperBound());
+    }
 }
