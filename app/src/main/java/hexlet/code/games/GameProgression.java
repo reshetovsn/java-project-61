@@ -28,7 +28,7 @@ public class GameProgression {
         String[] questions = new String[Engine.getRounds()];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            int init = Utils.getUpperBound();
+            int init = Utils.getRandomNumber();
             int step = Utils.getRandomNumWithBounds();
             var array = getArray(init, step);
             int result = getResult(array);
