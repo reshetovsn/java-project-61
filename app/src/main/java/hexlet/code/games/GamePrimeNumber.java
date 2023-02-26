@@ -19,11 +19,11 @@ public class GamePrimeNumber {
     }
 
     public static void checkPrime() {
-        String[] questions = new String[Engine.getRounds()];
+        String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int randomNumber = Utils.getRandomNumber();
-            questions[i] = "Question: " + randomNumber;
+            questions[i][0] = "Question: " + randomNumber;
             results[i] = isPrime(randomNumber) ? "yes" : "no";
         }
         Engine.flow(questions, results, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");

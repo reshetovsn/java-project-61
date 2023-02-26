@@ -23,12 +23,12 @@ public class GameGCD {
     }
 
     public static void getNod() {
-        String[] questions = new String[Engine.getRounds()];
+        String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int num1 = Utils.getRandomNumWithBounds();
             int num2 = Utils.getRandomNumWithBounds();
-            questions[i] = "Question: " + num1 + " " + num2;
+            questions[i][0] = "Question: " + num1 + " " + num2;
             results[i] = String.valueOf(getResult(num1, num2));
         }
         Engine.flow(questions, results, "Find the greatest common divisor of given numbers.");

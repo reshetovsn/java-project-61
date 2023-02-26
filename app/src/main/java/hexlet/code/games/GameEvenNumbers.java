@@ -9,12 +9,12 @@ public class GameEvenNumbers {
     }
 
     public static void checkEven() {
-        String[] questions = new String[Engine.getRounds()];
+        String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
-            var randNum = Utils.getRandomNumber();
-            questions[i] = "Question: " + randNum;
-            results[i] = isEven(randNum) ? "yes" : "no";
+            var randomNumber = Utils.getRandomNumber();
+            questions[i][0] = "Question: " + randomNumber;
+            results[i] = isEven(randomNumber) ? "yes" : "no";
         }
         Engine.flow(questions, results, "Answer 'yes' if the number is even, otherwise answer 'no'.");
     }

@@ -25,7 +25,7 @@ public class GameProgression {
     }
 
     public static void getNumFromProgression() {
-        String[] questions = new String[Engine.getRounds()];
+        String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int init = Utils.getRandomNumber();
@@ -38,7 +38,7 @@ public class GameProgression {
             for (var ii = 0; ii < words.length; ii++) {
                 words[ii] = words[ii].equals(String.valueOf(result)) ? ".." : words[ii];
             }
-            questions[i] = "Question: " + String.join(" ", words);
+            questions[i][0] = "Question: " + String.join(" ", words);
             results[i] = String.valueOf(result);
         }
         Engine.flow(questions, results, "What number is missing in the progression?");

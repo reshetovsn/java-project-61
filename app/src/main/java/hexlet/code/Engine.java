@@ -30,16 +30,15 @@ public class Engine {
         }
     }
 
-    public static void flow(String[] questions, String[] result, String task) {
+    public static void flow(String[][] questionsAndAnswers, String[] result, String task) {
         greeting();
         System.out.println(task);
-        var answer = new String[getRounds()];
         for (var i = 0; i < getRounds(); i++) {
-            System.out.println(questions[i]);
+            System.out.println(questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
-            answer[i] = sc.next();
-            checkAnswers(answer[i], result[i]);
+            questionsAndAnswers[i][1] = sc.next();
+            checkAnswers(questionsAndAnswers[i][1], result[i]);
         }
-        System.out.println("Congratulations, " +  userName + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

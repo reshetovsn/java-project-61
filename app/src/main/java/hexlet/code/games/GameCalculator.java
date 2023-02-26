@@ -26,13 +26,13 @@ public class GameCalculator {
     }
 
     public static void checkResults() {
-        String[] questions = new String[Engine.getRounds()];
+        String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             char operator = getOperator();
             int num1 = Utils.getRandomNumber();
             int num2 = Utils.getRandomNumber();
-            questions[i] = "Question: " + num1 + " " + operator + " " + num2;
+            questions[i][0] = "Question: " + num1 + " " + operator + " " + num2;
             results[i] = String.valueOf(getResult(num1, num2, operator));
         }
         Engine.flow(questions, results, "What is the result of the expression?");
