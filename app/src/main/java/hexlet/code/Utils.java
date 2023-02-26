@@ -7,12 +7,8 @@ public class Utils {
     private static final int LOWER_BOUND = 1;
     private static final Random RAND = new Random();
 
-    public static int getUpperBound() {
-        return UPPER_BOUND;
-    }
-
     public static int getRandomNumber() {
-        return RAND.nextInt(getUpperBound());
+        return RAND.nextInt(UPPER_BOUND);
     }
 
     public static int getRandomNumWithBounds() {
