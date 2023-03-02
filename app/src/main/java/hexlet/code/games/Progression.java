@@ -2,25 +2,16 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Progression {
 
-    private static int[] getArray(int initNumber, int step, int size) {
-        int[] progression = new int[size];
-        var r = initNumber;
+    private static String[] getArray(int initNumber, int step, int size) {
+        String[] progression = new String[size];
         for (var i = 0; i < size; i++) {
-            progression[i] = r;
-             r = r + step;
+            progression[i] = Integer.toString(initNumber + i * step);
         }
         return progression;
-    }
-
-    private static int getResult(int[] progression) {
-        Random randomElement = new Random();
-        int e = randomElement.nextInt(0, progression.length);
-        return progression[e];
     }
 
     public static void runGame() {
@@ -29,15 +20,13 @@ public class Progression {
             int init = Utils.getRandomNumber();
             int step = Utils.getRandomNumWithBounds();
             int progressionSize = Utils.getProgressionSize();
-            int[] array = getArray(init, step, progressionSize);
-            int result = getResult(array);
-            String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
-            String[] words = stringArray.split(", ");
-            for (var ii = 0; ii < words.length; ii++) {
-                words[ii] = words[ii].equals(String.valueOf(result)) ? ".." : words[ii];
-            }
-            questionsAndResults[i][0] = "Question: " + String.join(" ", words);
-            questionsAndResults[i][1] = String.valueOf(result);
+            Random rand = new Random();
+            int hiddenElement = rand.nextInt(0,progressionSize - 1);
+            String[] progression = getArray(init, step, progressionSize);
+            String result = progression[hiddenElement];
+            progression[hiddenElement] = "..";
+            questionsAndResults[i][0] = "Question: " + String.join(" ", progression);
+            questionsAndResults[i][1] = result;
         }
         Engine.flow(questionsAndResults, "What number is missing in the progression?");
     }
