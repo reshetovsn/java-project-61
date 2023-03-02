@@ -24,31 +24,17 @@ public class App {
         System.out.print("Your choice: ");
         int choiceNumber = sc.nextInt();
         switch (choiceNumber) {
-            case EXIT:
+            case EXIT -> {
                 System.out.println("Goodbye!");
                 sc.close();
-                break;
-            case GREETING:
-                Cli.greeting();
-                break;
-            case GAME_EVEN_NUMBERS:
-                EvenNumbers.runGame();
-                break;
-            case GAME_CALCULATOR:
-                Calculator.runGame();
-                break;
-            case GAME_GCD:
-                GCD.runGame();
-                break;
-            case GAME_PROGRESSION:
-                Progression.runGame();
-                break;
-            case GAME_PRIME_NUMBER:
-                PrimeNumber.runGame();
-                break;
-            default:
-                System.out.println("Your choice is incorrect. Please choose from 0-6");
-                break;
+            }
+            case GREETING -> Cli.greeting();
+            case GAME_EVEN_NUMBERS -> EvenNumbers.runGame();
+            case GAME_CALCULATOR -> Calculator.runGame();
+            case GAME_GCD -> GCD.runGame();
+            case GAME_PROGRESSION -> Progression.runGame();
+            case GAME_PRIME_NUMBER -> PrimeNumber.runGame();
+            default -> System.out.println("Your choice is incorrect. Please choose from 0-6");
         }
     }
 }
