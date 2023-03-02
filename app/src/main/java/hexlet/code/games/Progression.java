@@ -21,7 +21,7 @@ public class Progression {
             int step = Utils.getRandomNumWithBounds();
             int progressionSize = Utils.getProgressionSize();
             Random rand = new Random();
-            int hiddenElement = rand.nextInt(0,progressionSize - 1);
+            int hiddenElement = rand.nextInt(0, progressionSize - 1);
             String[] progression = getArray(init, step, progressionSize);
             String result = progression[hiddenElement];
             progression[hiddenElement] = "..";
