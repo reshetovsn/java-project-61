@@ -3,17 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class GameGCD {
+public class GCD {
 
     private static int getResult(int number1, int number2) {
-        // Make num1 always bigger then num2 //
         if (number2 > number1) {
             var temp = number1;
             number1 = number2;
             number2 = temp;
         }
         var r = number1 % number2;
-        // Euclid's algorithm //
+
         while (r != 0) {
             number1 = number2;
             number2 = r;
@@ -22,7 +21,7 @@ public class GameGCD {
         return number2;
     }
 
-    public static void getNod() {
+    public static void runGame() {
         String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {

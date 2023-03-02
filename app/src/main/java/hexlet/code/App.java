@@ -1,10 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.GameEvenNumbers;
-import hexlet.code.games.GameCalculator;
-import hexlet.code.games.GameGCD;
-import hexlet.code.games.GameProgression;
-import hexlet.code.games.GamePrimeNumber;
+import hexlet.code.games.EvenNumbers;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.PrimeNumber;
 import java.util.Scanner;
 
 public class App {
@@ -32,19 +32,19 @@ public class App {
                 Cli.greeting();
                 break;
             case GAME_EVEN_NUMBERS:
-                GameEvenNumbers.checkEven();
+                EvenNumbers.runGame();
                 break;
             case GAME_CALCULATOR:
-                GameCalculator.checkResults();
+                Calculator.runGame();
                 break;
             case GAME_GCD:
-                GameGCD.getNod();
+                GCD.runGame();
                 break;
             case GAME_PROGRESSION:
-                GameProgression.getNumFromProgression();
+                Progression.runGame();
                 break;
             case GAME_PRIME_NUMBER:
-                GamePrimeNumber.checkPrime();
+                PrimeNumber.runGame();
                 break;
             default:
                 System.out.println("Your choice is incorrect. Please choose from 0-6");

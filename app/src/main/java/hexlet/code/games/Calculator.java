@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 import java.util.Random;
 
-public class GameCalculator {
+public class Calculator {
 
     private static char getOperator() {
         Random randomChar = new Random();
@@ -25,7 +25,7 @@ public class GameCalculator {
         return result;
     }
 
-    public static void checkResults() {
+    public static void runGame() {
         String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {

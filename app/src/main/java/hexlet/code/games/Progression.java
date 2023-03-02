@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 import java.util.Arrays;
 import java.util.Random;
 
-public class GameProgression {
+public class Progression {
 
     private static int[] getArray(int initNumber, int step, int size) {
         int[] progression = new int[size];
@@ -23,7 +23,7 @@ public class GameProgression {
         return progression[e];
     }
 
-    public static void getNumFromProgression() {
+    public static void runGame() {
         String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
@@ -32,7 +32,6 @@ public class GameProgression {
             int progressionSize = Utils.getProgressionSize();
             int[] array = getArray(init, step, progressionSize);
             int result = getResult(array);
-            // convert array into string without "[" & "]"
             String stringArray = Arrays.toString(array).replaceAll("\\[|]", "");
             String[] words = stringArray.split(", ");
             for (var ii = 0; ii < words.length; ii++) {

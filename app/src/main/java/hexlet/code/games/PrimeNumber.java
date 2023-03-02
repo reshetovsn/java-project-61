@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class GamePrimeNumber {
+public class PrimeNumber {
 
     private static boolean isPrime(int number) {
         if (number <= 1) {
@@ -18,7 +18,7 @@ public class GamePrimeNumber {
         return true;
     }
 
-    public static void checkPrime() {
+    public static void runGame() {
         String[][] questions = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
