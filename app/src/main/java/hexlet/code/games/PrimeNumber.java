@@ -20,7 +20,6 @@ public class PrimeNumber {
 
     public static void runGame() {
         String[][] questionsAndResults = new String[Engine.getRounds()][2];
-        String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int randomNumber = Utils.getRandomNumber();
             questionsAndResults[i][0] = "Question: " + randomNumber;
