@@ -12,7 +12,6 @@ public class GCD {
             number2 = temp;
         }
         var r = number1 % number2;
-
         while (r != 0) {
             number1 = number2;
             number2 = r;
