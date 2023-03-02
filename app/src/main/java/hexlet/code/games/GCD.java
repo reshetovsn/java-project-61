@@ -22,14 +22,13 @@ public class GCD {
     }
 
     public static void runGame() {
-        String[][] questions = new String[Engine.getRounds()][2];
-        String[] results = new String[Engine.getRounds()];
+        String[][] questionsAndResults = new String[Engine.getRounds()][2];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int num1 = Utils.getRandomNumWithBounds();
             int num2 = Utils.getRandomNumWithBounds();
-            questions[i][0] = "Question: " + num1 + " " + num2;
-            results[i] = String.valueOf(getResult(num1, num2));
+            questionsAndResults[i][0] = "Question: " + num1 + " " + num2;
+            questionsAndResults[i][1] = String.valueOf(getResult(num1, num2));
         }
-        Engine.flow(questions, results, "Find the greatest common divisor of given numbers.");
+        Engine.flow(questionsAndResults, "Find the greatest common divisor of given numbers.");
     }
 }

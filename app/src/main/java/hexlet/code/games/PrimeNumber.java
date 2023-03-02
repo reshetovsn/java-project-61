@@ -19,13 +19,13 @@ public class PrimeNumber {
     }
 
     public static void runGame() {
-        String[][] questions = new String[Engine.getRounds()][2];
+        String[][] questionsAndResults = new String[Engine.getRounds()][2];
         String[] results = new String[Engine.getRounds()];
         for (var i = 0; i < Engine.getRounds(); i++) {
             int randomNumber = Utils.getRandomNumber();
-            questions[i][0] = "Question: " + randomNumber;
-            results[i] = isPrime(randomNumber) ? "yes" : "no";
+            questionsAndResults[i][0] = "Question: " + randomNumber;
+            questionsAndResults[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
-        Engine.flow(questions, results, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        Engine.flow(questionsAndResults, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 }

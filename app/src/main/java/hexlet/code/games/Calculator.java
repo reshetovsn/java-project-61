@@ -26,15 +26,14 @@ public class Calculator {
     }
 
     public static void runGame() {
-        String[][] questions = new String[Engine.getRounds()][2];
-        String[] results = new String[Engine.getRounds()];
+        String[][] questionsAndResults = new String[Engine.getRounds()][2];
         for (var i = 0; i < Engine.getRounds(); i++) {
             char operator = getOperator();
             int num1 = Utils.getRandomNumber();
             int num2 = Utils.getRandomNumber();
-            questions[i][0] = "Question: " + num1 + " " + operator + " " + num2;
-            results[i] = String.valueOf(getResult(num1, num2, operator));
+            questionsAndResults[i][0] = "Question: " + num1 + " " + operator + " " + num2;
+            questionsAndResults[i][1] = String.valueOf(getResult(num1, num2, operator));
         }
-        Engine.flow(questions, results, "What is the result of the expression?");
+        Engine.flow(questionsAndResults, "What is the result of the expression?");
     }
 }

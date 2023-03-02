@@ -9,13 +9,12 @@ public class EvenNumbers {
     }
 
     public static void runGame() {
-        String[][] questions = new String[Engine.getRounds()][2];
-        String[] results = new String[Engine.getRounds()];
+        String[][] questionsAndResults = new String[Engine.getRounds()][2];
         for (var i = 0; i < Engine.getRounds(); i++) {
             var randomNumber = Utils.getRandomNumber();
-            questions[i][0] = "Question: " + randomNumber;
-            results[i] = isEven(randomNumber) ? "yes" : "no";
+            questionsAndResults[i][0] = "Question: " + randomNumber;
+            questionsAndResults[i][1] = isEven(randomNumber) ? "yes" : "no";
         }
-        Engine.flow(questions, results, "Answer 'yes' if the number is even, otherwise answer 'no'.");
+        Engine.flow(questionsAndResults, "Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 }
