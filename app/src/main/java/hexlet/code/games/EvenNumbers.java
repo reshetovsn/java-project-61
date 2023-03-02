@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class EvenNumbers {
     public static boolean isEven(int number) {
-        return number % 2 == 0 ? true : false;
+        return number % 2 == 0;
     }
 
     public static void runGame() {
