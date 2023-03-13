@@ -2,9 +2,9 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Random;
 
 public class Progression {
+
     private static final int U_BOUND = 100;
     private static final int L_BOUND = 1;
     private static final int L_BOUND_PROGRESSION = 5;
@@ -25,8 +25,7 @@ public class Progression {
             int init = Utils.getRandomNumber(U_BOUND);
             int step = Utils.getRandomNumWithBounds(L_BOUND, U_BOUND);
             int progressionSize = Utils.getRandomNumWithBounds(L_BOUND_PROGRESSION, U_BOUND_PROGRESSION);
-            Random rand = new Random();
-            int hiddenElement = rand.nextInt(0, progressionSize - 1);
+            int hiddenElement = Utils.getRandomNumWithBounds(0, progressionSize - 1);
             String[] progression = returnProgression(init, step, progressionSize);
             String result = progression[hiddenElement];
             progression[hiddenElement] = "..";

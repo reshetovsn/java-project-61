@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
+
     private static final int U_BOUND = 100;
     private static final int L_BOUND = 1;
     private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
