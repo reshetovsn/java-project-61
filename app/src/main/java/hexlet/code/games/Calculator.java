@@ -16,12 +16,10 @@ public class Calculator {
 
     private static int getResult(int number1, int number2, char chOperator) {
         var result = 0;
-        if (chOperator == '+') {
-            result = number1 + number2;
-        } else if (chOperator == '-') {
-            result = number1 - number2;
-        } else if (chOperator == '*') {
-            result = number1 * number2;
+        switch (chOperator) {
+            case '+' -> result = number1 + number2;
+            case '-' -> result = number1 - number2;
+            case '*' -> result = number1 * number2;
         }
         return result;
     }
