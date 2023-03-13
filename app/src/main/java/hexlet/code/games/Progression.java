@@ -5,6 +5,7 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Progression {
+    private static final String DESCRIPTION = "What number is missing in the progression?";
 
     private static String[] getArray(int initNumber, int step, int size) {
         String[] progression = new String[size];
@@ -28,6 +29,6 @@ public class Progression {
             questionsAndResults[i][0] = "Question: " + String.join(" ", progression);
             questionsAndResults[i][1] = result;
         }
-        Engine.flow(questionsAndResults, "What number is missing in the progression?");
+        Engine.flow(questionsAndResults, DESCRIPTION);
     }
 }

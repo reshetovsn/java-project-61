@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class PrimeNumber {
+    private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     private static boolean isPrime(int number) {
         if (number <= 1) {
@@ -25,6 +26,6 @@ public class PrimeNumber {
             questionsAndResults[i][0] = "Question: " + randomNumber;
             questionsAndResults[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
-        Engine.flow(questionsAndResults, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        Engine.flow(questionsAndResults, DESCRIPTION);
     }
 }

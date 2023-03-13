@@ -12,3 +12,5 @@ bin
 .classpath
 .idea/
 .iml
+app.iml
+out/

@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class GCD {
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
     private static int getResult(int number1, int number2) {
         if (number2 > number1) {
@@ -28,6 +29,6 @@ public class GCD {
             questionsAndResults[i][0] = "Question: " + num1 + " " + num2;
             questionsAndResults[i][1] = String.valueOf(getResult(num1, num2));
         }
-        Engine.flow(questionsAndResults, "Find the greatest common divisor of given numbers.");
+        Engine.flow(questionsAndResults, DESCRIPTION);
     }
 }

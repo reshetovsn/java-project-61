@@ -5,6 +5,7 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Calculator {
+    private static final String DESCRIPTION = "What is the result of the expression?";
 
     private static char getOperator() {
         Random randomChar = new Random();
@@ -34,6 +35,6 @@ public class Calculator {
             questionsAndResults[i][0] = "Question: " + num1 + " " + operator + " " + num2;
             questionsAndResults[i][1] = String.valueOf(getResult(num1, num2, operator));
         }
-        Engine.flow(questionsAndResults, "What is the result of the expression?");
+        Engine.flow(questionsAndResults, DESCRIPTION);
     }
 }
