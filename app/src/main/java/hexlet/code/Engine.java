@@ -19,7 +19,7 @@ public class Engine {
         System.out.println(task);
         for (var i = 0; i < ROUNDS; i++) {
             String result = questionsAndAnswers[i][1];
-            System.out.println(questionsAndAnswers[i][0]);
+            System.out.println("Question: " + questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
             String answer = sc.next();
             if (answer.equals(result)) {

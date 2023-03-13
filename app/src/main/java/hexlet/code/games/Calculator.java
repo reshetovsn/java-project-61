@@ -32,7 +32,7 @@ public class Calculator {
             char operator = getOperator();
             int num1 = Utils.getRandomNumber();
             int num2 = Utils.getRandomNumber();
-            questionsAndResults[i][0] = "Question: " + num1 + " " + operator + " " + num2;
+            questionsAndResults[i][0] = Integer.toString(num1) + " " + operator + " " + Integer.toString(num2);
             questionsAndResults[i][1] = String.valueOf(getResult(num1, num2, operator));
         }
         Engine.flow(questionsAndResults, DESCRIPTION);

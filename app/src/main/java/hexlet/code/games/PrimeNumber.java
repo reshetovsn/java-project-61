@@ -23,7 +23,7 @@ public class PrimeNumber {
         String[][] questionsAndResults = new String[Engine.ROUNDS][2];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             int randomNumber = Utils.getRandomNumber();
-            questionsAndResults[i][0] = "Question: " + randomNumber;
+            questionsAndResults[i][0] = Integer.toString(randomNumber);
             questionsAndResults[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
         Engine.flow(questionsAndResults, DESCRIPTION);

@@ -26,7 +26,7 @@ public class Progression {
             String[] progression = getArray(init, step, progressionSize);
             String result = progression[hiddenElement];
             progression[hiddenElement] = "..";
-            questionsAndResults[i][0] = "Question: " + String.join(" ", progression);
+            questionsAndResults[i][0] = String.join(" ", progression);
             questionsAndResults[i][1] = result;
         }
         Engine.flow(questionsAndResults, DESCRIPTION);

@@ -26,7 +26,7 @@ public class GCD {
         for (var i = 0; i < Engine.ROUNDS; i++) {
             int num1 = Utils.getRandomNumWithBounds();
             int num2 = Utils.getRandomNumWithBounds();
-            questionsAndResults[i][0] = "Question: " + num1 + " " + num2;
+            questionsAndResults[i][0] = Integer.toString(num1) + " " + Integer.toString(num2);
             questionsAndResults[i][1] = String.valueOf(getResult(num1, num2));
         }
         Engine.flow(questionsAndResults, DESCRIPTION);
