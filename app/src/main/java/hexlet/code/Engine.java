@@ -5,11 +5,7 @@ import java.util.Scanner;
 public class Engine {
     private static Scanner sc;
     private static String userName;
-    private static final int ROUNDS = 3;
-
-    public static int getRounds() {
-        return ROUNDS;
-    }
+    public static final int ROUNDS = 3;
 
     public static void greeting() {
         sc = new Scanner(System.in);
@@ -21,7 +17,7 @@ public class Engine {
     public static void flow(String[][] questionsAndAnswers, String task) {
         greeting();
         System.out.println(task);
-        for (var i = 0; i < getRounds(); i++) {
+        for (var i = 0; i < ROUNDS; i++) {
             String result = questionsAndAnswers[i][1];
             System.out.println(questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");

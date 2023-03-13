@@ -22,8 +22,8 @@ public class GCD {
     }
 
     public static void runGame() {
-        String[][] questionsAndResults = new String[Engine.getRounds()][2];
-        for (var i = 0; i < Engine.getRounds(); i++) {
+        String[][] questionsAndResults = new String[Engine.ROUNDS][2];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             int num1 = Utils.getRandomNumWithBounds();
             int num2 = Utils.getRandomNumWithBounds();
             questionsAndResults[i][0] = "Question: " + num1 + " " + num2;

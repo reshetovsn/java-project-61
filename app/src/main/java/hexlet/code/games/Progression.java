@@ -16,8 +16,8 @@ public class Progression {
     }
 
     public static void runGame() {
-        String[][] questionsAndResults = new String[Engine.getRounds()][2];
-        for (var i = 0; i < Engine.getRounds(); i++) {
+        String[][] questionsAndResults = new String[Engine.ROUNDS][2];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             int init = Utils.getRandomNumber();
             int step = Utils.getRandomNumWithBounds();
             int progressionSize = Utils.getProgressionSize();

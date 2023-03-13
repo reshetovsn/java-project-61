@@ -20,8 +20,8 @@ public class PrimeNumber {
     }
 
     public static void runGame() {
-        String[][] questionsAndResults = new String[Engine.getRounds()][2];
-        for (var i = 0; i < Engine.getRounds(); i++) {
+        String[][] questionsAndResults = new String[Engine.ROUNDS][2];
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             int randomNumber = Utils.getRandomNumber();
             questionsAndResults[i][0] = "Question: " + randomNumber;
             questionsAndResults[i][1] = isPrime(randomNumber) ? "yes" : "no";
