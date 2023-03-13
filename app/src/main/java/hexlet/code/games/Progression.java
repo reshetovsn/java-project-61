@@ -5,6 +5,10 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Progression {
+    private static final int U_BOUND = 100;
+    private static final int L_BOUND = 1;
+    private static final int L_BOUND_PROGRESSION = 5;
+    private static final int U_BOUND_PROGRESSION = 10;
     private static final String DESCRIPTION = "What number is missing in the progression?";
 
     private static String[] returnProgression(int initNumber, int step, int size) {
@@ -18,9 +22,9 @@ public class Progression {
     public static void runGame() {
         String[][] questionsAndResults = new String[Engine.ROUNDS][2];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int init = Utils.getRandomNumber();
-            int step = Utils.getRandomNumWithBounds();
-            int progressionSize = Utils.getProgressionSize();
+            int init = Utils.getRandomNumber(U_BOUND);
+            int step = Utils.getRandomNumWithBounds(L_BOUND, U_BOUND);
+            int progressionSize = Utils.getRandomNumWithBounds(L_BOUND_PROGRESSION, U_BOUND_PROGRESSION);
             Random rand = new Random();
             int hiddenElement = rand.nextInt(0, progressionSize - 1);
             String[] progression = returnProgression(init, step, progressionSize);

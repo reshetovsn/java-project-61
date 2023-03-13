@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class PrimeNumber {
+    private static final int U_BOUND = 100;
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     private static boolean isPrime(int number) {
@@ -22,7 +23,7 @@ public class PrimeNumber {
     public static void runGame() {
         String[][] questionsAndResults = new String[Engine.ROUNDS][2];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int randomNumber = Utils.getRandomNumber();
+            int randomNumber = Utils.getRandomNumber(U_BOUND);
             questionsAndResults[i][0] = Integer.toString(randomNumber);
             questionsAndResults[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
