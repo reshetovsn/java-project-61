@@ -14,15 +14,12 @@ public class Calculator {
     }
 
     private static int returnResult(int number1, int number2, char chOperator) {
-        var result = 0;
-        if (chOperator == '+') {
-            result = number1 + number2;
-        } else if (chOperator == '-') {
-            result = number1 - number2;
-        } else if (chOperator == '*') {
-            result = number1 * number2;
-        }
-        return result;
+        return switch (chOperator) {
+            case '+' -> number1 + number2;
+            case '-' -> number1 - number2;
+            case '*' -> number1 * number2;
+            default -> throw new RuntimeException("Unknown operator: " + chOperator);
+        };
     }
 
     public static void runGame() {
