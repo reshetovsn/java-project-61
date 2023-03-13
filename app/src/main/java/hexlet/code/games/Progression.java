@@ -7,7 +7,7 @@ import java.util.Random;
 public class Progression {
     private static final String DESCRIPTION = "What number is missing in the progression?";
 
-    private static String[] getArray(int initNumber, int step, int size) {
+    private static String[] returnProgression(int initNumber, int step, int size) {
         String[] progression = new String[size];
         for (var i = 0; i < size; i++) {
             progression[i] = Integer.toString(initNumber + i * step);
@@ -23,7 +23,7 @@ public class Progression {
             int progressionSize = Utils.getProgressionSize();
             Random rand = new Random();
             int hiddenElement = rand.nextInt(0, progressionSize - 1);
-            String[] progression = getArray(init, step, progressionSize);
+            String[] progression = returnProgression(init, step, progressionSize);
             String result = progression[hiddenElement];
             progression[hiddenElement] = "..";
             questionsAndResults[i][0] = String.join(" ", progression);
