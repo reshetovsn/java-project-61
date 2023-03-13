@@ -6,6 +6,9 @@ import java.util.Random;
 
 public class Calculator {
     private static final String DESCRIPTION = "What is the result of the expression?";
+    private static final char SUM = '+';
+    private static final char DIFF = '-';
+    private static final char MULTIPLY = '*';
 
     private static char getOperator() {
         Random randomChar = new Random();
@@ -17,9 +20,10 @@ public class Calculator {
     private static int getResult(int number1, int number2, char chOperator) {
         var result = 0;
         switch (chOperator) {
-            case '+' -> result = number1 + number2;
-            case '-' -> result = number1 - number2;
-            case '*' -> result = number1 * number2;
+            case SUM -> result = number1 + number2;
+            case DIFF -> result = number1 - number2;
+            case MULTIPLY -> result = number1 * number2;
+            default -> throw new RuntimeException("Unknown operator:" + chOperator);
         }
         return result;
     }
